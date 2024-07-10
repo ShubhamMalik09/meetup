@@ -2,9 +2,10 @@ import MeetingTypeList from '@/components/MeetingTypeList';
 import React from 'react'
 
 const Home = () => {
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const now = new Date();
-  const time =now.toLocaleTimeString('en-in',{hour:'2-digit', minute:'2-digit'});
-  const date =(new Intl.DateTimeFormat('en-in',{
+  const time =now.toLocaleTimeString('en-US',{hour:'2-digit', minute:'2-digit', timeZone:timezone});
+  const date =(new Intl.DateTimeFormat('en-US',{
     dateStyle:'full'
   })).format(now);
   return (
