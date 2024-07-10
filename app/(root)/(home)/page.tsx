@@ -3,8 +3,8 @@ import React from 'react'
 
 const Home = () => {
   const now = new Date();
-  const time =now.toLocaleTimeString('en-us',{hour:'2-digit', minute:'2-digit'});
-  const date =(new Intl.DateTimeFormat('en-us',{
+  const time =now.toLocaleTimeString('en-in',{hour:'2-digit', minute:'2-digit'});
+  const date =(new Intl.DateTimeFormat('en-in',{
     dateStyle:'full'
   })).format(now);
   return (
