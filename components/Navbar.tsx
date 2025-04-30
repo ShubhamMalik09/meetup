@@ -11,6 +11,7 @@ const Navbar = () => {
         <Image src={"/icons/meetUp.png"} width={70} height={70} alt='MeetUp logo' className='max-sm:size-10'/>
         <p className='text-[26px] font-extrabold text-white max-sm:hidden'>MeetUp</p>
       </Link>
+      <p className='text-[14px] font-bold text-white'>Made with 💗 by Shubham Malik</p>
       <div className='flex gap-5 '>
           <SignedIn>
             <UserButton/>
