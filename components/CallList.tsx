@@ -63,7 +63,6 @@ const CallList = ({type} :{type:'ended' | 'upcoming' | 'recordings'} )=> {
 
     const calls = getCalls();
     const noCallsMessage = getNoCallsMessage();
-
     if(isLoading) return <Loader/>
   return (
     <div className='grid grid-cols-1 gap-5 xl:grid-cols-2' >
@@ -72,7 +71,7 @@ const CallList = ({type} :{type:'ended' | 'upcoming' | 'recordings'} )=> {
             <MeetingCard
                 key={(meeting as Call).id}
                 title={(meeting as Call).state?.custom?.description?.substring(0,30) || meeting?.filename?.substring(0,20) || 'Personal Meeting'}
-                date={meeting?.state?.startsAt.toLocaleString() || meeting.start_time.toLocalString()}
+                date={meeting?.state?.startsAt.toLocaleString() || meeting.start_time}
                 icon={type==='ended' ? '/icons/previous.svg' : type==='upcoming' ? '/icons/upcoming.svg' : '/icons/recordings.svg' }
                 isPreviousMeeting={type==='ended'}
                 buttonIcon1={type==='recordings'?'/icons/play.svg' : undefined}
